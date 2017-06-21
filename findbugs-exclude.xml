@@ -19,7 +19,7 @@
 
 <FindBugsFilter>
     <Match>
-        <class name="org.wso2.extension.siddhi.evalscript.scala.ScalaEvaluationEngine"/>
+        <class name="org.wso2.extension.siddhi.script.scala.ScalaEvaluationEngine"/>
         <Bug pattern="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE"/>
     </Match>
 </FindBugsFilter>

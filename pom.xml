@@ -25,8 +25,8 @@
         <version>5</version>
     </parent>
 
-    <groupId>org.wso2.extension.siddhi.evalscript.scala</groupId>
-    <artifactId>siddhi-execution-evalscript-scala-parent</artifactId>
+    <groupId>org.wso2.extension.siddhi.script.scala</groupId>
+    <artifactId>siddhi-script-scala-parent</artifactId>
     <version>4.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Siddhi Eval Script Extension - Scala Aggregator Pom</name>
@@ -56,9 +56,9 @@
     </properties>
 
     <scm>
-        <connection>scm:git:https://github.com/wso2-extensions/siddhi-evalscript-scala.git</connection>
-        <url>https://github.com/wso2-extensions/siddhi-evalscript-scala.git</url>
-        <developerConnection>scm:git:https://github.com/wso2-extensions/siddhi-evalscript-scala.git
+        <connection>scm:git:https://github.com/wso2-extensions/siddhi-script-scala.git</connection>
+        <url>https://github.com/wso2-extensions/siddhi-script-scala.git</url>
+        <developerConnection>scm:git:https://github.com/wso2-extensions/siddhi-script-scala.git
         </developerConnection>
         <tag>HEAD</tag>
     </scm>
@@ -86,8 +86,8 @@
                 <version>${scala.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.extension.siddhi.evalscript.js</groupId>
-                <artifactId>siddhi-evalscript-js</artifactId>
+                <groupId>org.wso2.extension.siddhi.script.js</groupId>
+                <artifactId>siddhi-script-js</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
             </dependency>

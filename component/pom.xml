@@ -20,13 +20,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.wso2.extension.siddhi.evalscript.scala</groupId>
-        <artifactId>siddhi-execution-evalscript-scala-parent</artifactId>
+        <groupId>org.wso2.extension.siddhi.script.scala</groupId>
+        <artifactId>siddhi-script-scala-parent</artifactId>
         <version>4.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>siddhi-execution-evalscript-scala</artifactId>
+    <artifactId>siddhi-execution-script-scala</artifactId>
     <packaging>bundle</packaging>
     <name>Siddhi Eval Script Extension - Scala</name>
 
@@ -48,8 +48,8 @@
             <artifactId>scala-reflect</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.wso2.extension.siddhi.evalscript.js</groupId>
-            <artifactId>siddhi-evalscript-js</artifactId>
+            <groupId>org.wso2.extension.siddhi.script.js</groupId>
+            <artifactId>siddhi-script-js</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -93,7 +93,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Export-Package>
-                            org.wso2.extension.siddhi.evalscript.scala,
+                            org.wso2.extension.siddhi.script.scala,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional

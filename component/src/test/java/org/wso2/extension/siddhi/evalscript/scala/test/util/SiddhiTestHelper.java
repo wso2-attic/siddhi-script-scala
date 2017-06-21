@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.extension.siddhi.evalscript.scala.test.util;
+package org.wso2.extension.siddhi.script.scala.test.util;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

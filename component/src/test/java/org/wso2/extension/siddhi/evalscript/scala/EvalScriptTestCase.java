@@ -16,14 +16,14 @@
  * under the License.
  */
 
-package org.wso2.extension.siddhi.evalscript.scala;
+package org.wso2.extension.siddhi.script.scala;
 
 import org.apache.log4j.Logger;
 import org.testng.AssertJUnit;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.wso2.extension.siddhi.evalscript.js.EvalJavaScript;
-import org.wso2.extension.siddhi.evalscript.scala.test.util.SiddhiTestHelper;
+import org.wso2.extension.siddhi.script.js.EvalJavaScript;
+import org.wso2.extension.siddhi.script.scala.test.util.SiddhiTestHelper;
 import org.wso2.siddhi.core.SiddhiAppRuntime;
 import org.wso2.siddhi.core.SiddhiManager;
 import org.wso2.siddhi.core.event.Event;
