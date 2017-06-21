@@ -21,15 +21,14 @@
 
     <parent>
         <groupId>org.wso2.extension.siddhi.evalscript.scala</groupId>
-        <artifactId>siddhi-evalscript-scala-parent</artifactId>
-        <version>3.1.3-SNAPSHOT</version>
+        <artifactId>siddhi-execution-evalscript-scala-parent</artifactId>
+        <version>4.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>siddhi-evalscript-scala</artifactId>
+    <artifactId>siddhi-execution-evalscript-scala</artifactId>
     <packaging>bundle</packaging>
-    <name>WSO2 Siddhi Eval Script Extension - Scala</name>
-    <url>http://wso2.org</url>
+    <name>Siddhi Eval Script Extension - Scala</name>
 
     <dependencies>
         <dependency>
@@ -54,8 +53,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -81,8 +80,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.0</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -104,5 +103,10 @@
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <text.mapper.version>4.0.0-M4</text.mapper.version>
+        <mavan.findbugsplugin.exclude.file>../findbugs-exclude.xml</mavan.findbugsplugin.exclude.file>
+    </properties>
 
 </project>
