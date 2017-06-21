@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.extension.siddhi.evalscript.scala
+package org.wso2.extension.siddhi.script.scala
 
 import com.googlecode.scalascriptengine.EvalCode
 

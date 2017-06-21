@@ -1,1 +1,1 @@
-# siddhi-evalscript-scala
+# siddhi-script-scala

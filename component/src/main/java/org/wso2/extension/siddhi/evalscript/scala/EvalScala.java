@@ -16,15 +16,27 @@
  * under the License.
  */
 
-package org.wso2.extension.siddhi.evalscript.scala;
+package org.wso2.extension.siddhi.script.scala;
 
-import org.wso2.siddhi.core.exception.ExecutionPlanCreationException;
-import org.wso2.siddhi.core.exception.ExecutionPlanRuntimeException;
-import org.wso2.siddhi.core.function.EvalScript;
+import org.wso2.siddhi.annotation.Example;
+import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.core.exception.SiddhiAppCreationException;
+import org.wso2.siddhi.core.exception.SiddhiAppRuntimeException;
+import org.wso2.siddhi.core.function.Script;
+import org.wso2.siddhi.core.util.config.ConfigReader;
 import org.wso2.siddhi.query.api.definition.Attribute;
 import scala.Function1;
 
-public class EvalScala implements EvalScript {
+/**
+ * This will evaluate Scala
+ **/
+@Extension(
+        name = "scala",
+        namespace = "script",
+        description = "Scala evaluation function",
+        examples = @Example(description = "TBD", syntax = "TBD")
+)
+public class EvalScala extends Script {
 
     private Function1<Object[], Object> scalaFunction;
     private Attribute.Type returnType;
@@ -34,25 +46,26 @@ public class EvalScala implements EvalScript {
 
     }
 
-    public void init(String name, String body) {
+    public void init(String name, String body, ConfigReader configReader) {
         this.functionName = name;
-        if( returnType == null ) {
-            throw new ExecutionPlanCreationException("Cannot find the return type of the function " + functionName);
+        if (returnType == null) {
+            throw new SiddhiAppCreationException("Cannot find the return type of the function " + functionName);
         }
         ScalaEvaluationEngine scalaEvaluationEngine = new ScalaEvaluationEngine();
         try {
             scalaFunction = scalaEvaluationEngine.eval("data: (Array[Any]) =>  {\n" + body + "\n}");
         } catch (Exception e) {
-            throw new ExecutionPlanCreationException("Compilation Failure of the Scala Function " + name, e);
+            throw new SiddhiAppCreationException("Compilation Failure of the Scala Function " + name, e);
         }
     }
+
 
     @Override
     public Object eval(String name, Object[] arg) {
         try {
             return scalaFunction.apply(arg);
         } catch (Exception e) {
-            throw new ExecutionPlanRuntimeException("Error while evaluating function " + name, e);
+            throw new SiddhiAppRuntimeException("Error while evaluating function " + name, e);
         }
     }
 
