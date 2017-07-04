@@ -28,7 +28,7 @@
 
     <artifactId>siddhi-script-scala</artifactId>
     <packaging>bundle</packaging>
-    <name>Siddhi Eval Script Extension - Scala</name>
+    <name>Siddhi Script Extension - Scala</name>
 
     <dependencies>
         <dependency>

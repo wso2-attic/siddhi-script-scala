@@ -16,4 +16,4 @@
 # under the License.
 #
 
-scala=org.wso2.extension.siddhi.script.scala.EvalScala
+scala=EvalScala
