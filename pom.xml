@@ -88,7 +88,7 @@
             <dependency>
                 <groupId>org.wso2.extension.siddhi.script.js</groupId>
                 <artifactId>siddhi-script-js</artifactId>
-                <version>${project.version}</version>
+                <version>${js.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
