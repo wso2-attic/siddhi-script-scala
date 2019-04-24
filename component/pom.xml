@@ -21,7 +21,7 @@
     <parent>
         <groupId>org.wso2.extension.siddhi.script.scala</groupId>
         <artifactId>siddhi-script-scala-parent</artifactId>
-        <version>5.0.0-SNAPSHOT</version>
+        <version>5.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
